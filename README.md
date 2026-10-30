@@ -1,11 +1,13 @@
 # Salesforce Recruitment Management App
 
 ## Project Overview
+
 The Salesforce Recruitment Management App is designed to simplify and manage the recruitment process within an organization. It helps recruiters manage job openings, maintain candidate information, track job applications, and automate recruitment activities.
 
 The application is developed using Salesforce declarative tools and custom development technologies.
 
 ## Technologies Used
+
 - Salesforce CRM
 - Apex Programming
 - SOQL
@@ -80,18 +82,20 @@ force-app/
 ```
 
 ## Tools Used
+
 - Salesforce Developer Edition
 - Visual Studio Code
 - Salesforce CLI
 - GitHub
 
 ## Future Enhancements
+
 - Improve candidate search and application experience.
 - Enhance recruitment dashboard and reporting.
 - Add more automation and security controls.
 
 ## Author
-**Saumya Pandey**
+
+**Naincy Pandey**
 
 GitHub Repository: [Salesforce Recruitment Management App](https://github.com/saumyapandey328-ops/Salesforce-Recruitment-Management-App)
-
