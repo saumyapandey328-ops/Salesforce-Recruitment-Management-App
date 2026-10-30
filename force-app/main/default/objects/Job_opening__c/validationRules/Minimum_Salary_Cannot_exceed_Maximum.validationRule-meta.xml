@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Minimum_Salary_Cannot_exceed_Maximum</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT( ISBLANK( Minimum_Salary__c )), NOT( ISBLANK(  Maximum_Salary__c )),  Minimum_Salary__c &gt; Maximum_Salary__c )</errorConditionFormula>
+    <errorDisplayField>Minimum_Salary__c</errorDisplayField>
+    <errorMessage>minimum salary cannot be greater than maximum salary</errorMessage>
+</ValidationRule>

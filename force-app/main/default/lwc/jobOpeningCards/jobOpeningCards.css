@@ -1,0 +1,26 @@
+.job-card {
+    background: #ffffff;
+    border: 1px solid #dddbda;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #16325c;
+    margin-bottom: 12px;
+}
+
+.salary {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 8px;
+}

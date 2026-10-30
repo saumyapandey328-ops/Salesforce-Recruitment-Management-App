@@ -1,0 +1,91 @@
+<template>
+  <lightning-card title="Available job openings"  icon-name="standard:work_order">
+    <div class="slds-around_medium">
+      <p>TEST 123 - UPDATED HTML</p>
+      
+<template if:true={showApplicationForm}>
+    <div class="slds-box slds-theme_default slds-m-top_medium">
+
+        <h2 class="slds-text-heading_medium">
+            Apply for Job
+        </h2>
+
+        <p class="slds-m-top_small">
+            Selected Job ID: {selectedJobId}
+        </p>
+
+        <lightning-radio-group
+            name="candidateType"
+            label="Select Candidate Type"
+            options={candidateTypeOptions}
+            value={candidateType}
+            type="radio"
+             onchange={handleCandidateTypeChange}>
+        </lightning-radio-group>
+<template if:true={isNewCandidate}>
+    <div class="slds-m-top_medium">
+        <h3 class="slds-text-heading_small">
+            New Candidate Details
+        </h3>
+
+        <lightning-input
+            label="Candidate Name"
+            name="candidateName"
+            onchange={handleInputChange}>
+        </lightning-input>
+
+        <lightning-input
+            label="Email"
+            name="candidateEmail"
+            type="email"
+            onchange={handleInputChange}>
+        </lightning-input>
+    </div>
+</template>
+<template if:true={isExistingCandidate}>
+    <div class="slds-m-top_medium">
+        <h3 class="slds-text-heading_small">
+            Existing Candidate Details
+        </h3>
+
+        <lightning-input
+            label="Candidate Email"
+            name="existingCandidateEmail"
+            type="email"
+            required>
+        </lightning-input>
+    </div>
+</template>
+<div class="slds-m-top_medium">
+    <lightning-button
+        label="Save Application"
+        variant="brand"
+        onclick={handleSaveApplication}>
+    </lightning-button>
+</div>
+    </div>
+</template>
+       <p>Form value: {showApplicationForm}</p>
+        <template if:true={jobOpenings}>
+            <template for:each={jobOpenings} for:item="job">
+                <div key={job.Id} class="job-card">
+                    <h2 class="job-title">{job.Name}</h2>
+                    <p class="salary"> Minimum Salary:{job.Minimum_Salary__c}</p>
+                    <p class="salary"> Maximum Salary:{job.Maximum_Salary__c}</p>
+                    <lightning-button  label="View Details" variant="brand"
+                     data-id={job.Id} onclick={handleViewDetails}></lightning-button>
+                     <lightning-button
+                     label="Apply Now"
+                     variant="brand"
+                     data-id={job.Id}
+                     onclick={handleApplyNow}
+                     class="slds-m-top_small">
+                     </lightning-button>
+               </div>
+            </template>
+            
+</template>
+        
+    </div>
+  </lightning-card>
+</template>
